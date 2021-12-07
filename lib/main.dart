@@ -48,7 +48,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "Random Chat",
       theme: ThemeData(
-        primaryColor: Colors.cyan,
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: AuthView(), //forwarding to authentication screen
     );
