@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:random_chat/models/chatMessageModel.dart';
-import 'package:random_chat/models/chatUsersModel.dart';
-import 'package:random_chat/widgets/chatList.dart';
+import 'package:random_chat/models/chat_message_model.dart';
+import 'package:random_chat/models/chat_users_model.dart';
+import 'package:random_chat/widgets/chat_list.dart';
 
 class ChatPage extends StatefulWidget {
   @override

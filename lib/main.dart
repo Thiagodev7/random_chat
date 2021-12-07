@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'screens/home/homePage.dart';
+import 'package:random_chat/screens/auth/view/auth_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +17,7 @@ class _MyAppState extends State<MyApp> {
   bool _error = false;
 
   void initializeFlutterFire() async {
+    //firebase boot
     try {
       await Firebase.initializeApp();
       setState(() {
@@ -38,13 +39,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     if (_error) {
-      return Container(child: Text('Deu erro aqui'));
+      //handling firebase startup errors
+      return Container(child: Text('Erro com banco de Dados...'));
     }
     if (!_initialized) {
-      return Container(child: Text("aguarde"));
+      return CircularProgressIndicator();
     }
     return MaterialApp(
-      home: HomeViwer(),
+      title: "Random Chat",
+      theme: ThemeData(
+        primaryColor: Colors.cyan,
+      ),
+      home: AuthView(), //forwarding to authentication screen
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_chat/screens/chat/chatPage.dart';
+import 'package:random_chat/screens/chat/view/chat_page.dart';
 
 class HomeViwer extends StatefulWidget {
   const HomeViwer({Key key}) : super(key: key);

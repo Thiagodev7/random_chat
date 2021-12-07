@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_chat/screens/chat/chatDetailPage.dart';
+import 'package:random_chat/screens/chat/view/chat_detailPage.dart';
 
 class ConversationList extends StatefulWidget {
   String name;
